@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111927;
+  background-image: radial-gradient(
+      at 47% 33%,
+      hsl(162, 77%, 40%) 0,
+      transparent 59%
+    ),
+    radial-gradient(at 82% 65%, hsl(218, 39%, 11%) 0, transparent 55%);
+}
+
+.menu {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 550px;
+  height: 550px;
+  border: 1px solid black;
+  color: hsl(162, 77%, 40%);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  box-shadow: 15px 15px 30px black;
+}
+.card-menu {
+  width: 350px;
+  height: 350px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  margin: 10px;
+  box-shadow: 15px 15px 30px black;
+}
+.img-cards {
+  width: 280px;
+  height: 280px;
+}
+.contacts-area {
+}
+
+.container2 {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  color: hsl(162, 77%, 40%);
+  width: 350px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 10px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 12px;
+  box-shadow: 15px 15px 30px black;
+}
+.buttons-add {
+  display: flex;
+  justify-content: space-between;
+}
+.search-area {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+div .search-area input {
+  width: 85%;
+  height: 36px;
+  border: none;
+  border-radius: 5px;
+}
