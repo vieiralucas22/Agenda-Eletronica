@@ -47,6 +47,13 @@ body {
   height: 280px;
 }
 .contacts-area {
+  width: 500px;
+  height: 500px;
+  margin: 20px 0;
+}
+.functions-area {
+  display: flex;
+  justify-content: space-between;
 }
 
 .container2 {
