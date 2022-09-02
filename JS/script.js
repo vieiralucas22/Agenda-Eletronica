@@ -1,14 +1,15 @@
+let arrayContacts = [];
 let name_contact = document.getElementById("name");
 let phone_contact = document.getElementById("phone");
 let id_contact = document.getElementById("id");
 let contacts_area = document.querySelector("#contacts-area");
 
-let arrayContacts = [];
+function removeContact() {}
 
 function Atualizar() {
   let tam = arrayContacts.length;
-  console.log(tam);
-  contacts_area.innerHTML += `<section class="contact-section mb-1" id="contact-section">
+
+  contacts_area.innerHTML += `<section class="contact-section" id="contact-section">
   <div class="text-section" id="text-section">
     <p id="contact-id">${arrayContacts[tam - 1].id}</p>
     <p id="contact-name">${arrayContacts[tam - 1].name}</p>
@@ -16,6 +17,7 @@ function Atualizar() {
   </div>
 
   <button
+    onclick="removeContact()"
     id="section-button"
     class="section-button btn btn-outline-danger"
   >
@@ -50,5 +52,6 @@ function addContact() {
     };
     arrayContacts.push(contacts);
     resetFields();
+    Atualizar();
   }
 }

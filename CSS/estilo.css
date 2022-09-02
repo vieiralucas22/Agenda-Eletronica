@@ -22,7 +22,7 @@ body {
 }
 .card {
   width: 550px;
-  height: 550px;
+  height: 600px;
   border: 1px solid black;
   color: hsl(162, 77%, 40%);
   backdrop-filter: blur(16px) saturate(180%);
@@ -56,11 +56,17 @@ body {
   justify-content: space-between;
 }
 
-.container2 {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.pop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: #000000ab;
+  display: grid;
+  place-content: center;
+  visibility: hidden;
+}
+.pop:target {
+  visibility: visible;
 }
 .form {
   color: hsl(162, 77%, 40%);
@@ -102,6 +108,7 @@ div .search-area input {
   background-color: rgba(27, 24, 24, 0.3);
   border-radius: 12px;
   box-shadow: 5px 5px 15px black;
+  margin-bottom: 10px;
 }
 .text-section {
   display: flex;

@@ -34,35 +34,33 @@
           <input type="text" class="" placeholder="  Buscar contato" />
           <button class="btn btn-outline-success">Buscar</button>
         </div>
-        <div class="contacts-area" id="contacts-area">
-          <section class="contact-section" id="contact-section">
-            <div class="text-section" id="text-section">
-              <p id="contact-id">ID</p>
-              <p id="contact-name">Nome</p>
-              <p id="contact-phone">Telefone</p>
-            </div>
-
-            <button
-              id="section-button"
-              class="section-button btn btn-outline-danger"
-            >
-              <img
-                id="btn-img"
-                class="btn-img"
-                src="./IMGS/images-removebg-preview (1).png"
-                alt=""
-              />
-            </button>
-          </section>
-        </div>
+        <div class="contacts-area" id="contacts-area"></div>
         <div class="functions-area">
-          <a href="./add-contact.html" class="btn btn-outline-success"
-            >Cadastrar contato</a
-          >
-          <button class="btn btn-outline-success" onclick="Atualizar()">
-            Atualizar
-          </button>
+          <a href="#pop" class="btn btn-outline-success">Cadastrar contato</a>
           <button class="btn btn-outline-success">Listar Contatos</button>
+        </div>
+      </div>
+
+      <div class="pop" id="pop">
+        <div class="form" id="Pop-up">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Number:</label>
+            <input type="text" class="form-control" id="phone" />
+          </div>
+          <div class="form-group">
+            <label for="id">ID:</label>
+            <input type="text" class="form-control" id="id" />
+          </div>
+          <div class="buttons-add">
+            <a href="#" class="btn btn-outline-danger"> Back </a>
+            <button class="btn btn-outline-success" onclick="addContact()">
+              Add contact
+            </button>
+          </div>
         </div>
       </div>
     </div>
