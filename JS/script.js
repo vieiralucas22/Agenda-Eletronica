@@ -1,11 +1,32 @@
 let name_contact = document.getElementById("name");
 let phone_contact = document.getElementById("phone");
 let id_contact = document.getElementById("id");
-let contacts_area = document.getElementById("contacts-area");
+let contacts_area = document.querySelector("#contacts-area");
+
 let arrayContacts = [];
 
-function printConstactArea(arrayContacts) {
-  contacts_area += arrayContacts;
+function Atualizar() {
+  let tam = arrayContacts.length;
+  console.log(tam);
+  contacts_area.innerHTML += `<section class="contact-section mb-1" id="contact-section">
+  <div class="text-section" id="text-section">
+    <p id="contact-id">${arrayContacts[tam - 1].id}</p>
+    <p id="contact-name">${arrayContacts[tam - 1].name}</p>
+    <p id="contact-phone">${arrayContacts[tam - 1].phone}</p>
+  </div>
+
+  <button
+    id="section-button"
+    class="section-button btn btn-outline-danger"
+  >
+    <img
+      id="btn-img"
+      class="btn-img"
+      src="./IMGS/images-removebg-preview (1).png"
+      alt=""
+    />
+  </button>
+</section>`;
 }
 
 function resetFields() {
@@ -29,6 +50,5 @@ function addContact() {
     };
     arrayContacts.push(contacts);
     resetFields();
-    printConstactArea(arrayContacts);
   }
 }

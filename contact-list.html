@@ -35,15 +35,19 @@
           <button class="btn btn-outline-success">Buscar</button>
         </div>
         <div class="contacts-area" id="contacts-area">
-          <section class="contact-section">
-            <div class="text-section">
-              <p>ID</p>
-              <p>Nome</p>
-              <p>Telefone</p>
+          <section class="contact-section" id="contact-section">
+            <div class="text-section" id="text-section">
+              <p id="contact-id">ID</p>
+              <p id="contact-name">Nome</p>
+              <p id="contact-phone">Telefone</p>
             </div>
 
-            <button class="section-button btn btn-outline-danger">
+            <button
+              id="section-button"
+              class="section-button btn btn-outline-danger"
+            >
               <img
+                id="btn-img"
                 class="btn-img"
                 src="./IMGS/images-removebg-preview (1).png"
                 alt=""
@@ -55,6 +59,9 @@
           <a href="./add-contact.html" class="btn btn-outline-success"
             >Cadastrar contato</a
           >
+          <button class="btn btn-outline-success" onclick="Atualizar()">
+            Atualizar
+          </button>
           <button class="btn btn-outline-success">Listar Contatos</button>
         </div>
       </div>
