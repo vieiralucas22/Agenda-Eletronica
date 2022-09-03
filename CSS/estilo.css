@@ -121,3 +121,6 @@ div .search-area input {
   color: white;
   width: 25px;
 }
+.input-search {
+  padding-left: 10px;
+}

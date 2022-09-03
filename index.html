@@ -31,12 +31,22 @@
           <h5 class="title">Contact book</h5>
         </div>
         <div class="search-area form-group">
-          <input type="text" class="" placeholder="  Buscar contato" />
-          <button class="btn btn-outline-success">Buscar</button>
+          <input
+            type="text"
+            class="input-search"
+            placeholder="Search contacts"
+            id="search-contact"
+          />
+          <button class="btn btn-outline-success" onclick="search()">
+            Search
+          </button>
         </div>
         <div class="contacts-area" id="contacts-area"></div>
         <div class="functions-area">
           <a href="#pop" class="btn btn-outline-success">Cadastrar contato</a>
+          <button class="btn btn-outline-success" onclick="Atualizar()">
+            Refresh
+          </button>
           <button class="btn btn-outline-success">Listar Contatos</button>
         </div>
       </div>

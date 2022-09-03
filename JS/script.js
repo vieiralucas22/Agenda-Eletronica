@@ -3,21 +3,64 @@ let name_contact = document.getElementById("name");
 let phone_contact = document.getElementById("phone");
 let id_contact = document.getElementById("id");
 let contacts_area = document.querySelector("#contacts-area");
+let contact_section = document.querySelector("#contact-section");
+let search_contact = document.querySelector("#search-contact");
 
-function removeContact() {}
+function sortContacts() {
+  let tam = arrayContacts.length;
+  for (let index = 0; index < tam; index++) {}
+}
+
+function search() {
+  let tam = arrayContacts.length;
+  for (let index = 0; index < tam; index++) {
+    if (
+      search_contact.value == arrayContacts[index].id ||
+      search_contact.value == arrayContacts[index].name ||
+      search_contact.value == arrayContacts[index].phone
+    ) {
+      contacts_area.innerHTML = `<section class="contact-section" id="contact-section">
+      <div class="text-section" id="text-section">
+        <p id="contact-id">${arrayContacts[index].id}</p>
+        <p id="contact-name">${arrayContacts[index].name}</p>
+        <p id="contact-phone">${arrayContacts[index].phone}</p>
+      </div>
+    
+      <button
+        onclick="removeContact(${index})"
+        id="section-button"
+        class="section-button btn btn-outline-danger"
+      >
+        <img
+          id="btn-img"
+          class="btn-img"
+          src="./IMGS/images-removebg-preview (1).png"
+          alt=""
+        />
+      </button>
+    </section>`;
+    }
+  }
+}
+
+function removeContact(posDelete) {
+  arrayContacts.splice(posDelete, 1);
+  Atualizar();
+}
 
 function Atualizar() {
+  contacts_area.innerHTML = "";
   let tam = arrayContacts.length;
-
-  contacts_area.innerHTML += `<section class="contact-section" id="contact-section">
+  for (let index = 0; index < tam; index++) {
+    contacts_area.innerHTML += `<section class="contact-section" id="contact-section">
   <div class="text-section" id="text-section">
-    <p id="contact-id">${arrayContacts[tam - 1].id}</p>
-    <p id="contact-name">${arrayContacts[tam - 1].name}</p>
-    <p id="contact-phone">${arrayContacts[tam - 1].phone}</p>
+    <p id="contact-id">${arrayContacts[index].id}</p>
+    <p id="contact-name">${arrayContacts[index].name}</p>
+    <p id="contact-phone">${arrayContacts[index].phone}</p>
   </div>
 
   <button
-    onclick="removeContact()"
+    onclick="removeContact(${index})"
     id="section-button"
     class="section-button btn btn-outline-danger"
   >
@@ -29,6 +72,7 @@ function Atualizar() {
     />
   </button>
 </section>`;
+  }
 }
 
 function resetFields() {
