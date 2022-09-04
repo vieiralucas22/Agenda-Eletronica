@@ -99,7 +99,7 @@ div .search-area input {
 }
 .contact-section {
   display: flex;
-  width: 100%;
+  width: auto;
   padding: 10px;
   border-radius: 10px;
   justify-content: space-around;
@@ -115,12 +115,27 @@ div .search-area input {
   column-gap: 60px;
   margin-top: 14px;
 }
-.section-button {
-}
 .btn-img {
   color: white;
   width: 25px;
 }
 .input-search {
   padding-left: 10px;
+}
+@media (max-width: 768px) {
+  .contacts-area {
+    width: 450px;
+  }
+}
+@media (max-width: 428px) {
+  .contacts-area {
+    width: 350px;
+  }
+  .contact-section {
+    column-gap: 12px;
+    height: 80px;
+  }
+  .functions-area {
+    column-gap: 10px;
+  }
 }
